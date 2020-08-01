@@ -1,0 +1,136 @@
+<html>
+    <head>
+        <style>
+            .hero
+            {
+                background-color: blueviolet;
+            background-image: url("./images/sky.jpg");
+            background-position: center;
+            position: relative;
+            overflow-x:hidden;
+            width: 100%;
+            height: 100vh;
+
+            }
+
+            .highway{
+                background-image: url("./images/road.jpg");
+                width: 400%;
+                height: 200px;
+                display: block;
+                z-index: 1;
+                left: 0;
+                right:0;
+                bottom: 0;
+                animation: highway 4s linear infinite;
+            }
+            @keyframes highway{
+                100%
+                {
+                    transform: translateX(-3400px);
+                }
+            }
+
+            .city
+            {
+                height: 250px;
+                width:500%;
+                background-image:url("./images/city.png") ;
+                position: absolute;
+                bottom:-26px;
+                left: 0;
+                right: 0;
+                display:block;
+                z-index: 1;
+                background-repeat: repeat-x;
+                animation: city 4s linear infinite;
+            }
+            @keyframes city {
+                100%{
+                    transform:translateX(-1400px)
+                }
+                
+            }
+
+            .car
+            {
+                width:400px;
+                position: absolute;
+                left: 50px;
+                bottom: -113px;
+                z-index:2;
+                transform:translateX(-50px)
+
+            }
+            .car img{
+                width: 100%;
+                animation: car 9s linear infinite;
+            }
+
+            @keyframes car{
+                100%{
+                    transform: translateY(-2px);
+                    }
+                50%{
+                    transform: translateY(2px);
+                   }
+                0%{
+                    transform: translateY(-1px);
+                   }
+                
+            
+            }
+            .wheel{
+                position: absolute;
+                z-index: 2;
+                left: 14%;
+                bottom: -38px;
+                transform: translateX(-50%);
+            }
+
+            .wheel img{
+                width: 72px;
+                height: 72px;
+                animation: wheel 1s linear infinite;
+            }
+            .backwheel{
+                left:-165px;
+                position: absolute;
+            }
+
+            .frontwheel{
+                left: 80px;
+                position: absolute;
+            }
+
+            @keyframes wheel{
+                100%{
+                    transform:rotate(360deg)
+                }
+            }
+        </style>
+
+    </head>
+    <body>
+        <div class="hero">
+
+        </div>
+        <div class="highway">
+
+        </div>
+        <div class="city">
+
+        </div>
+
+        <div class="car">
+            <img src="images/car.png">
+
+        </div>
+
+        <div class="wheel">
+            <img src="images/wheel.png" class="backwheel">
+            <img src="images/wheel.png" class="frontwheel">
+        </div>
+
+    </body>
+</html>
